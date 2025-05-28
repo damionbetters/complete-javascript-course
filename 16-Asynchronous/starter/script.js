@@ -4,8 +4,6 @@ const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
 const getCountryData = function (country) {
-  let neighbor;
-
   fetch(`https://restcountries.com/v3.1/name/${country}?fullText=true`)
     .then(response => response.json())
     .then(data => {
